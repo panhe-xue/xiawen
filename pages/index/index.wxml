@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="wrap" style='height: {{height}}'>
+  <view class="container" style='height: {{height}}'>
+    屏幕1
+  </view>
+  <view class="container" style='height: {{height}}'>
+    屏幕2
+  </view>
+</view>
