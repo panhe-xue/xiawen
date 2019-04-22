@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="wrap" style='height: {{height}}px'>
+<view class="wrap" style='height: {{height}}px' bindtouchstart="handltouchstart" bindtouchmove="handletouchmove" animationend="handleanimationend">
   <view class="sections" style='height: {{index*height}}px;' animation="{{animation}}" hover-class="none" hover-stop-propagation="false">
     <view class="container" style='height: {{height}}px'>
       屏幕1

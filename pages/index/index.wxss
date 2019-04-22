@@ -17,12 +17,13 @@
 }
 .pull-down{
   position: fixed;
-  width: 32px;
-  height: 18px;
+  width: 64rpx;
+  height: 60rpx;
   display: block;
+  box-sizing: border-box;
   left: 50%;
-  bottom: 10px;
-  margin-left: -16px;
+  bottom: 0rpx;
+  margin-left: -16rpx;
   z-index: 100;
   -webkit-animation: up-arrow 1.5s  linear both infinite;
   animation: up-arrow 1.5s  linear both infinite;
@@ -30,8 +31,8 @@
 .arrow1, .arrow1:after{
   position: relative;
   margin: 0 auto;
-  width: 15rpx;
-  height: 15rpx;
+  width: 30rpx;
+  height: 30rpx;
   border-top: 5rpx solid #fff;
   border-right: 5rpx solid #fff;
   -webkit-transform: rotate(-45deg);
@@ -42,8 +43,8 @@
   position: absolute;
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  left : -10rpx;
-  top: 7rpx;
+  left : 20rpx;
+  top: -23rpx;
 }
 @keyframes up-arrow{
   0% {

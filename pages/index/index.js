@@ -9,6 +9,8 @@ Page({
     currentPageIndex: 0,
     index: 4,
     top: 0,
+    lastX: 0,
+    lastY: 0,
     animation: ''
   },
   onReady() {
@@ -22,6 +24,27 @@ Page({
       }
     })
   },
+  handleanimationend() {
+    console.log('test')
+  },
+  handltouchstart(event) {
+    this.data.lastX = event.touches[0].pageX
+    this.data.lastY = event.touches[0].pageY
+  },
+  handletouchmove(event) {
+    let currentX = event.touches[0].pageX
+    let currentY = event.touches[0].pageY
+    let tx = currentX - this.data.lastX
+    let ty = currentY - this.data.lastY
+    //上下方向滑动
+    if (ty < 0)
+      this.pullDown()
+    else if (ty > 0)
+      this.pullUp()
+    //将当前坐标进行保存以进行下一次计算
+    this.data.lastX = currentX
+    this.data.lastY = currentY
+  },
   pullDown(event) {
     const that = this
     if(that.data.currentPageIndex >= that.data.index || that.data.currentPageIndex < 0) return
@@ -31,7 +54,12 @@ Page({
     that.doAnimation()
   },
   pullUp() {
-    
+    const that = this
+    if(that.data.currentPageIndex > that.data.index || that.data.currentPageIndex <= 0) return
+    this.setData({
+      currentPageIndex: that.data.currentPageIndex-1
+    })
+    that.doAnimation()
   },
   doAnimation() {
     const that = this
