@@ -1,9 +1,24 @@
 <!--index.wxml-->
-<view class="wrap" style='height: {{height}}'>
-  <view class="container" style='height: {{height}}'>
-    屏幕1
+<view class="wrap" style='height: {{height}}px'>
+  <view class="sections" style='height: {{index*height}}px;' animation="{{animation}}" hover-class="none" hover-stop-propagation="false">
+    <view class="container" style='height: {{height}}px'>
+      屏幕1
+    </view>
+    <view class="container" style='height: {{height}}px'>
+      屏幕2
+    </view>
+    <view class="container" style='height: {{height}}px'>
+      屏幕3
+    </view>
+    <view class="container" style='height: {{height}}px'>
+      屏幕4
+    </view>
+    <view class="container" style='height: {{height}}px'>
+      屏幕5
+    </view>
   </view>
-  <view class="container" style='height: {{height}}'>
-    屏幕2
+  <view class="pull-down" bindtap="pullDown" hover-class="none" hover-stop-propagation="false">
+    <view class="arrow1" hover-class="none" hover-stop-propagation="false">
+    </view>
   </view>
 </view>

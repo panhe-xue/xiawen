@@ -5,39 +5,49 @@ const app = getApp()
 Page({
   data: {
     width: 0,
-    height: 0
+    height: 0,
+    currentPageIndex: 0,
+    index: 4,
+    top: 0,
+    animation: ''
+  },
+  onReady() {
+    this.animation = wx.createAnimation({
+      duration: 500,
+      timingFunction: 'ease',
+      dalay: 100,
+      transformOrigin: 'left top 0',
+      success: function(res) {
+        console.log('animation', res)
+      }
+    })
+  },
+  pullDown(event) {
+    const that = this
+    if(that.data.currentPageIndex >= that.data.index || that.data.currentPageIndex < 0) return
+    this.setData({
+      currentPageIndex: that.data.currentPageIndex+1
+    })
+    that.doAnimation()
+  },
+  pullUp() {
+    
+  },
+  doAnimation() {
+    const that = this
+    this.setData({
+      top: -(that.data.height * that.data.currentPageIndex)
+    })
+    this.animation.translate(0, this.data.top).step()
+    this.setData({
+      //输出动画
+      animation: this.animation.export()
+    })
   },
   onLoad: function () {
     this.setData({
-      width: app.globalData.screenWidth + 'px',
-      height: app.globalData.screenHeight + 'px'
+      width: +app.globalData.screenWidth,
+      height: +app.globalData.screenHeight
     })
-    // if (app.globalData.userInfo) {
-    //   this.setData({
-    //     userInfo: app.globalData.userInfo,
-    //     hasUserInfo: true
-    //   })
-    // } else if (this.data.canIUse){
-    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //   // 所以此处加入 callback 以防止这种情况
-    //   console.log("first....")
-    //   app.userInfoReadyCallback = res => {
-    //     this.setData({
-    //       userInfo: res.userInfo,
-    //       hasUserInfo: true
-    //     })
-    //   }
-    // } else {
-    //   // 在没有 open-type=getUserInfo 版本的兼容处理
-    //   wx.getUserInfo({
-    //     success: res => {
-    //       app.globalData.userInfo = res.userInfo
-    //       this.setData({
-    //         userInfo: res.userInfo,
-    //         hasUserInfo: true
-    //       })
-    //     }
-    //   })
-    // }
   }
 })
