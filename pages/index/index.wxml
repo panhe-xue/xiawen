@@ -1,6 +1,6 @@
 <!--index.wxml-->
-<view class="wrap" style='height: {{height}}px' bindtouchstart="handltouchstart" bindtouchmove="handletouchmove" animationend="handleanimationend">
-  <view class="sections" style='height: {{index*height}}px;' animation="{{animation}}" hover-class="none" hover-stop-propagation="false">
+<view class="wrap" style='height: {{height}}px' bindtouchstart="handltouchstart" bindtouchmove="handletouchmove" >
+  <view class="sections box-transition" style='height: {{index*height}}px;top: {{top}}' animation="{{animation}}" bindtransitionend="transitionEnd" hover-class="none" hover-stop-propagation="false">
     <view class="container" style='height: {{height}}px'>
       屏幕1
     </view>
@@ -20,5 +20,10 @@
   <view class="pull-down" bindtap="pullDown" hover-class="none" hover-stop-propagation="false">
     <view class="arrow1" hover-class="none" hover-stop-propagation="false">
     </view>
+  </view>
+  <view class="playing" hover-class="none" hover-stop-propagation="false" bindtap="dostop">
+    <audio src="../../static/music.mp3" loop style="display:none;" id="myAudio"></audio>
+    <cover-image class="play-img {{istop}}" src="../../static/play.png" bindload="" binderror="">
+    </cover-image>
   </view>
 </view>

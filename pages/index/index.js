@@ -10,28 +10,20 @@ Page({
     index: 4,
     top: 0,
     lastX: 0,
+    istop: 'stop',
     lastY: 0,
+    isTransition: false,
     animation: ''
   },
   onReady() {
-    this.animation = wx.createAnimation({
-      duration: 500,
-      timingFunction: 'ease',
-      dalay: 100,
-      transformOrigin: 'left top 0',
-      success: function(res) {
-        console.log('animation', res)
-      }
-    })
-  },
-  handleanimationend() {
-    console.log('test')
+    this.audioCtx = wx.createInnerAudioContext("myAudio")
   },
   handltouchstart(event) {
     this.data.lastX = event.touches[0].pageX
     this.data.lastY = event.touches[0].pageY
   },
   handletouchmove(event) {
+    if(this.data.isTransition) return
     let currentX = event.touches[0].pageX
     let currentY = event.touches[0].pageY
     let tx = currentX - this.data.lastX
@@ -47,7 +39,11 @@ Page({
   },
   pullDown(event) {
     const that = this
+    if(this.data.isTransition) return
     if(that.data.currentPageIndex >= that.data.index || that.data.currentPageIndex < 0) return
+    this.setData({
+      isTransition: true
+    })
     this.setData({
       currentPageIndex: that.data.currentPageIndex+1
     })
@@ -57,6 +53,9 @@ Page({
     const that = this
     if(that.data.currentPageIndex > that.data.index || that.data.currentPageIndex <= 0) return
     this.setData({
+      isTransition: true
+    })
+    this.setData({
       currentPageIndex: that.data.currentPageIndex-1
     })
     that.doAnimation()
@@ -64,12 +63,7 @@ Page({
   doAnimation() {
     const that = this
     this.setData({
-      top: -(that.data.height * that.data.currentPageIndex)
-    })
-    this.animation.translate(0, this.data.top).step()
-    this.setData({
-      //输出动画
-      animation: this.animation.export()
+      top: -(that.data.height * that.data.currentPageIndex) + 'px'
     })
   },
   onLoad: function () {
@@ -77,5 +71,20 @@ Page({
       width: +app.globalData.screenWidth,
       height: +app.globalData.screenHeight
     })
+  },
+  transitionEnd: function () {
+    this.setData({
+      isTransition: false
+    })
+  },
+  dostop() {
+    const that = this
+    this.setData({
+      istop: (that.data.istop == 'stop' ? '' : 'stop')
+    })
+    this.stopMusic()
+  },
+  stopMusic() {
+    this.data.istop == 'stop' ? this.audioCtx.play() : this.audioCtx.stop()
   }
 })
