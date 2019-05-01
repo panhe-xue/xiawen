@@ -1,19 +1,25 @@
 <!--index.wxml-->
-<view class="wrap" style='height: {{height}}px' bindtouchstart="handltouchstart" bindtouchmove="handletouchmove" >
-  <view class="sections box-transition" style='height: {{index*height}}px;top: {{top}}' animation="{{animation}}" bindtransitionend="transitionEnd" hover-class="none" hover-stop-propagation="false">
-    <view class="container" style='height: {{height}}px'>
+<view class="container container-fill" >
+  <view 
+    class="scroll-fullpage" 
+    bindtouchstart="doTouchstart" 
+    bindtouchmove="doTouchmove" 
+    bindtouchend="doTouchend" 
+    style="transform: translateY();margin-top: {{margintop}}px"
+  >
+    <view class="section section1">
       屏幕1
     </view>
-    <view class="container" style='height: {{height}}px'>
+    <view class="section section2">
       屏幕2
     </view>
-    <view class="container" style='height: {{height}}px'>
+    <view class="section section3">
       屏幕3
     </view>
-    <view class="container" style='height: {{height}}px'>
+    <view class="section section4">
       屏幕4
     </view>
-    <view class="container" style='height: {{height}}px'>
+    <view class="section section5">
       屏幕5
     </view>
   </view>
@@ -22,8 +28,8 @@
     </view>
   </view>
   <view class="playing" hover-class="none" hover-stop-propagation="false" bindtap="dostop">
-    <audio src="../../static/music.mp3" loop style="display:none;" id="myAudio"></audio>
-    <cover-image class="play-img {{istop}}" src="../../static/play.png" bindload="" binderror="">
+    <audio src="" loop style="display:none;" id="myAudio"></audio>
+    <cover-image class="play-img {{istop}}" src="https://182.61.38.185:8001/play.png" bindload="" binderror="">
     </cover-image>
   </view>
 </view>
