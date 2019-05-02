@@ -1,25 +1,75 @@
 <!--index.wxml-->
 <view class="container container-fill" >
-  <view 
-    class="scroll-fullpage" 
-    bindtouchstart="doTouchstart" 
-    bindtouchmove="doTouchmove" 
-    bindtouchend="doTouchend" 
-    style="transform: translateY();margin-top: {{margintop}}px"
+  <view
+    class="scroll-fullpage"
+    bindtouchstart="doTouchstart"
+    bindtouchmove="doTouchmove"
+    bindtouchend="doTouchend"
+    style="transform: translateY(-{{currentPageIndex*100}}%);-webkit-transform: translateY(-{{currentPageIndex*100}}%);margin-top: {{margintop}}px"
   >
-    <view class="section section1">
-      屏幕1
+    <view class="section section1 {{currentPageIndex == 0 ? 'active' : ''}}">
+      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="sec1_fix_b"></cover-image>
+      <view class="top"></view>
+      <view class="flexT">
+        <view class="l">
+          <view class="lwrap">
+            <view class="redF"><em style="transform: rotate(-45deg)">鲜</em></view>
+            <view>
+              <text>活虾现捉  美味鲜甜</text>
+            </view>
+            <view class="redF"><em style="transform: rotate(-45deg)">爽</em></view>
+            <view>
+              <text>鲜嫩肉质  麻辣劲爽</text>
+            </view>
+          </view>
+        </view>
+        <view class="c">
+          <view class="wenan">
+            <view class="xiao">
+              <image style="width: 100%;height:30rpx;" src="https://182.61.38.185:8001/sec1_xiaoEn.jpg"/>
+              <image style="width: 100%;height:105rpx;" src="https://182.61.38.185:8001/sec1_xiaoCN.jpg"/>
+            </view>
+            <view class="long">
+              <image style="width: 100%;height:83px;" src="https://182.61.38.185:8001/sec1_long.jpg" />
+            </view>
+            <view class="xia">
+              <image style="width: 100%;height:30rpx;" src="https://182.61.38.185:8001/sec1_longxia.jpg"/>
+              <image style="width: 100%;height:150rpx;" src="https://182.61.38.185:8001/sec1_xiaCN.jpg"/>
+            </view>
+          </view>
+          <view class="pic">
+            <image style="width: 95%;margin-top:45rpx;margin-left:50rpx;" src="https://182.61.38.185:8001/sec1_example.jpg"/>
+          </view>
+        </view>
+        <view class="r lwrap" style="display:flex;margin-top: -100rpx;">
+          <view class="redF"><em style="transform: rotate(-45deg)">麻</em></view>
+          <view class="redF"><em style="transform: rotate(-45deg)">辣</em></view>
+          <view class="redF"><em style="transform: rotate(-45deg)">鲜</em></view>
+          <view class="redF"><em style="transform: rotate(-45deg)">香</em></view>
+        </view>
+      </view>
+      <view class="bott" style="display: flex;flex-direction: column;align-items:center;justify-content:center;">
+        <view>
+          <text style="font-size: 23rpx;">活虾现捉 美味鲜甜</text>
+        </view>
+        <view>
+          <text style="font-size: 40rpx;">开业钜惠，吃一斤送半斤</text>
+        </view>
+        <view style="font-size: 23rpx;">
+          正宗老字号
+        </view>
+      </view>
     </view>
-    <view class="section section2">
-      屏幕2
+    <view class="section section2 {{currentPageIndex == 1 ? 'active' : ''}}">
+      屏幕2-{{currentPageIndex}}%
     </view>
-    <view class="section section3">
-      屏幕3
+    <view class="section section3 {{currentPageIndex == 2 ? 'active' : ''}}">
+      屏幕3-{{currentPageIndex}}%
     </view>
-    <view class="section section4">
+    <view class="section section4{{currentPageIndex == 3 ? 'active' : ''}}">
       屏幕4
     </view>
-    <view class="section section5">
+    <view class="section section5{{currentPageIndex == 4 ? 'active' : ''}}">
       屏幕5
     </view>
   </view>
@@ -28,7 +78,6 @@
     </view>
   </view>
   <view class="playing" hover-class="none" hover-stop-propagation="false" bindtap="dostop">
-    <audio src="" loop style="display:none;" id="myAudio"></audio>
     <cover-image class="play-img {{istop}}" src="https://182.61.38.185:8001/play.png" bindload="" binderror="">
     </cover-image>
   </view>
