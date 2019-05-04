@@ -9,6 +9,8 @@
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
+
+/* ...............................pages  common...........................*/
 .section{
   width: 100%;
   height: 100%;
@@ -17,47 +19,50 @@
   padding: 10rpx;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  position: relative;
 }
-.section .sec1_fix_b{
+.section .secs_fix_b{
   position: absolute;
   height: 80%;
 }
-/* page1 */
-.section1 .flexT{
+.section .flexT{
   display: flex;
   flex-direction: row;
   height: 80%;
   position: relative;
 }
-.section1 .top{
-  width: 100%;
-  height: 50rpx;
+.section .flexT .c{
+  height: 100%;
+  flex: 8;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
-.flexT .l, .flexT .r{
+.section .flexT .l, .flexT .r{
   flex: 1;
   height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.flexT .lwrap{
+.section .lwrap{
   justify-content: center;
   align-items: center;
 }
-.flexT .lwrap view{
+.section .lwrap view{
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30rpx;
   margin: 10rpx auto;
 }
-.flexT .lwrap text{
+.section .lwrap text{
   display: block;
   width: 30rpx;
   height: 400rpx;
   margin: 20rpx;
 }
-.lwrap .redF{
+.section .lwrap .redF{
   width: 50rpx;
   height: 50rpx;
   background-color: red;
@@ -65,26 +70,25 @@
   color: #fff;
   -webkit-transform: rotate(45deg);
 }
-/* c */
-.flexT .c{
-  height: 100%;
-  flex: 8;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
+
+
+/* ...............................section1 center...........................*/
+.section1 .top{
+  width: 100%;
+  height: 50rpx;
 }
-.c .wenan{
+.section1 .c .wenan{
   flex: 1;
   position: relative;
 }
-.c .wenan .xiao{
+.section1 .c .wenan .xiao{
   width:95rpx;
   height: 100rpx;
   left: 50%;
   margin-left: -45rpx;
   position: absolute;
 }
-.c .wenan .long{
+.section1 .c .wenan .long{
   width:147rpx;
   height: 160rpx;
   left: 20%;
@@ -92,7 +96,7 @@
   position: absolute;
   top: 124rpx;
 }
-.c .wenan .xia{
+.section1 .c .wenan .xia{
   width:190rpx;
   height: 129rpx;
   left: 70%;
@@ -100,7 +104,7 @@
   margin-left: -128rpx;
   position: absolute;
 }
-.c .pic{
+.section1 .c .pic{
   flex: 2;
 }
 
