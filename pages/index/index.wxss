@@ -43,39 +43,78 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.section .lwrap{
-  justify-content: center;
-  align-items: center;
+.section .r {
+  margin-top: 125rpx;
 }
 .section .lwrap view{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30rpx;
-  margin: 10rpx auto;
+  font-size: 25rpx;
+  margin: 0rpx auto;
 }
 .section .lwrap text{
   display: block;
   width: 30rpx;
-  height: 400rpx;
-  margin: 20rpx;
+  height: 300rpx;
 }
 .section .lwrap .redF{
   width: 50rpx;
   height: 50rpx;
+  margin-bottom: 20rpx;
   background-color: red;
   transform: rotate(45deg);
   color: #fff;
   -webkit-transform: rotate(45deg);
 }
 
+.section .top{
+  width: 100%;
+  height: 150rpx;
+}
+
+/* ...............................section2,section3,section4,section5 commom...........................*/
+.sectopright{
+  position: relative;
+  overflow: hidden;
+}
+.sectopright .sections-fixtop{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400rpx;
+  height: 400rpx;
+  margin-right: -150rpx;
+  margin-top: -150rpx;
+  background: url("https://182.61.38.185:8001/sec1_example.jpg") no-repeat;
+  background-size: cover;
+}
+.sectopright .flexT-fixbottom{
+  position: absolute;
+  width: 155rpx;
+  height: 153rpx;
+  bottom: -10rpx;
+  right: -22rpx;
+  background: url("https://182.61.38.185:8001/sec1_lajiao.jpg") no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
 
 /* ...............................section1 center...........................*/
 .section1 .top{
   width: 100%;
   height: 50rpx;
+}
+.section1 .r {
+  justify-content: center;
+  margin-top: 0rpx;
 }
 .section1 .c .wenan{
   flex: 1;
@@ -108,13 +147,130 @@
   flex: 2;
 }
 
+/* .......................section2 center......................... */
+.sec2-con{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+}
+.sec2-con .common-title{
+  flex: 1;
+  display: flex;
+  width: 300rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  line-height: 30rpx;
+  color: #fff;
+  margin: 20rpx;
+  font-size: 30rpx;
+  font-weight:600;
+  background: url("https://182.61.38.185:8001/f.jpg") no-repeat;
+  background-size: contain;
+  letter-spacing: 8rpx;
+}
+.sec2-con .sec2-one{
+  flex: 4.5;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec2-one .one-pic{
+  width: 100%;
+  height: 300rpx;
+  margin: 0 auto;
+  margin: 20rpx 0;
+}
+.sec2-one .pickOut{
+  width: 80%;
+  background: url("https://182.61.38.185:8001/e.jpg") no-repeat;
+  background-size: contain;
+  margin-top:-47rpx;
+  margin-left:-56rpx;
+}
+.sec2-one .xiangla{
+  background: url("https://182.61.38.185:8001/g.jpg") no-repeat;
+  background-size: contain;
+}
+.sec2-one .shisanxiang{
+  background: url("https://182.61.38.185:8001/b.jpg") no-repeat;
+  background-size: contain;
+}
+.sec2-con .sec2-two{
+  flex: 4.5;
+  display: flex;
+}
+.sec2-two .c2-l, .sec2-two .c2-r{
+  flex: 1
+}
+
+/* .......................section3 center......................... */
+.sectopright .common-title{
+  flex: 1;
+  display: flex;
+  width: 300rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  line-height: 30rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight:600;
+  background: url("https://182.61.38.185:8001/f.jpg") no-repeat;
+  background-size: contain;
+  letter-spacing: 8rpx;
+  margin-left: 25rpx;
+}
+.sectopright .common-title text{
+  margin-top: 12rpx;
+}
+.sectopright .common-content{
+  flex: 9;
+
+}
+.sectopright .common-wrap{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section3 .sec3-content{
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.sec3-content .food-title{
+  font-size: 35rpx;
+  display: flex;
+  letter-spacing: 10rpx;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  margin: 30rpx;
+  color: red;
+}
+.food-msg .msg-item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.msg-item text{
+  font-size: 30rpx;
+  letter-spacing: 5rpx;
+}
 
 
-
-
-
-
-
+/* .......................section3 center......................... */
+.section4 .mmsg view{
+  margin: 20rpx 10rpx;
+}
 
 
 

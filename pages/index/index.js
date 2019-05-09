@@ -5,11 +5,39 @@ const app = getApp()
 Page({
   data: {
     currentPageIndex: 0,
-    totalIndex: 4,
+    totalIndex: 3,
     istop: 'stop',
     startY: 0,
     endY: 0,
-    margintop: 0
+    margintop: 0,
+    food: {
+      xianchao: [
+        {name: '农家小炒肉', price: 22},
+        {name: '红烧茄子', price: 18},
+        {name: '香辣牛肚', price: 28},
+        {name: '口水鸭', price: 28},
+        {name: '回锅牛肉', price: 32},
+        {name: '小笋子炒五花肉', price: 18},
+        {name: '外婆菜炒肉末', price: 16},
+        {name: '青椒肉丝', price: 22},
+        {name: '青椒回锅肉', price: 28},
+        {name: '青椒炒蛋', price: 16},
+        {name: '红烧鱼块', price: 22},
+        {name: '香干炒肉', price: 18},
+        {name: '酸辣鸡杂', price: 22}
+      ]
+    },
+    longxia: [
+      {name: '牛蛙', price: 68},
+      {name: '麻辣油焖小龙虾', price: 68},
+      {name: '香辣小龙虾', price: 68},
+      {name: '十三香小龙虾', price: 68},
+      {name: '蒜蓉小龙虾', price: 68},
+      {name: '招牌肉蟹煲', price: 88},
+      {name: '干锅牛腩', price: 68},
+      {name: '干锅啤酒鸭', price: 68},
+      {name: '平锅草鱼', price: 68}
+    ]
   },
   onReady() {
     this.innerAudioContext = wx.createInnerAudioContext()
