@@ -9,7 +9,7 @@
   >
     <!-- ............屏幕1............... -->
     <view class="section section1 {{currentPageIndex == 0 ? 'active' : ''}}">
-      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
+      <cover-image src="https://www.panhe.xyz:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
       <view class="top"></view>
       <view class="flexT">
         <view class="l">
@@ -27,19 +27,19 @@
         <view class="c">
           <view class="wenan">
             <view class="xiao">
-              <image style="width: 100%;height:30rpx;" src="https://182.61.38.185:8001/sec1_xiaoEn.jpg"/>
-              <image style="width: 100%;height:105rpx;" src="https://182.61.38.185:8001/sec1_xiaoCN.jpg"/>
+              <image style="width: 100%;height:30rpx;" src="https://www.panhe.xyz:8001/sec1_xiaoEn.jpg"/>
+              <image style="width: 100%;height:105rpx;" src="https://www.panhe.xyz:8001/sec1_xiaoCN.jpg"/>
             </view>
             <view class="long">
-              <image style="width: 100%;height:83px;" src="https://182.61.38.185:8001/sec1_long.jpg" />
+              <image style="width: 100%;height:83px;" src="https://www.panhe.xyz:8001/sec1_long.jpg" />
             </view>
             <view class="xia">
-              <image style="width: 100%;height:30rpx;" src="https://182.61.38.185:8001/sec1_longxia.jpg"/>
-              <image style="width: 100%;height:150rpx;" src="https://182.61.38.185:8001/sec1_xiaCN.jpg"/>
+              <image style="width: 100%;height:30rpx;" src="https://www.panhe.xyz:8001/sec1_longxia.jpg"/>
+              <image style="width: 100%;height:150rpx;" src="https://www.panhe.xyz:8001/sec1_xiaCN.jpg"/>
             </view>
           </view>
           <view class="pic">
-            <image style="width: 86%;margin-top:45rpx;margin-left:30rpx;" src="https://182.61.38.185:8001/sec1_example.jpg"/>
+            <image style="width: 86%;margin-top:45rpx;margin-left:30rpx;" src="https://www.panhe.xyz:8001/sec1_example.jpg"/>
           </view>
         </view>
         <view class="r lwrap" style="display:flex;">
@@ -63,7 +63,7 @@
     </view>
     <!-- ............屏幕2................ -->
     <view class="section sectopright section2 {{currentPageIndex == 1 ? 'active' : ''}}">
-      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
+      <cover-image src="https://www.panhe.xyz:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
       <view  class="sections-fixtop"></view>
       <view class="top"></view>
       <view class="flexT">
@@ -126,7 +126,7 @@
     </view>
     <!-- ............屏幕3.................. -->
     <view class="section sectopright section3 {{currentPageIndex == 2 ? 'active' : ''}}">
-      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
+      <cover-image src="https://www.panhe.xyz:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
       <view  class="sections-fixtop"></view>
       <view class="top"></view>
       <view class="flexT">
@@ -169,7 +169,7 @@
     </view>
     <!-- ............屏幕4................... -->
     <view class="section sectopright section4 {{currentPageIndex == 3 ? 'active' : ''}}">
-      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
+      <cover-image src="https://www.panhe.xyz:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
       <view  class="sections-fixtop"></view>
       <view class="top"></view>
       <view class="flexT">
@@ -217,7 +217,7 @@
     </view>
     <!-- ............屏幕5................... -->
     <!-- <view class="section sectopright section5{{currentPageIndex == 4 ? 'active' : ''}}">
-      <cover-image src="https://182.61.38.185:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
+      <cover-image src="https://www.panhe.xyz:8001/sectionBac.jpg" class="secs_fix_b"></cover-image>
       <view  class="sections-fixtop"></view>
       <view class="top"></view>
       <view class="flexT">
@@ -256,7 +256,7 @@
     </view>
   </view>
   <view class="playing" hover-class="none" hover-stop-propagation="false" bindtap="dostop">
-    <cover-image class="play-img {{istop}}" src="https://182.61.38.185:8001/play.png" bindload="" binderror="">
+    <cover-image class="play-img {{istop}}" src="https://www.panhe.xyz:8001/play.png" bindload="" binderror="">
     </cover-image>
   </view>
 </view>

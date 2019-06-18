@@ -41,7 +41,7 @@ Page({
   },
   onReady() {
     this.innerAudioContext = wx.createInnerAudioContext()
-    this.innerAudioContext.src = "https://182.61.38.185:8001/music.mp3"
+    this.innerAudioContext.src = "https://www.panhe.xyz:8001/music.mp3"
     this.innerAudioContext.autoplay = false
     this.innerAudioContext.loop = true
   },
